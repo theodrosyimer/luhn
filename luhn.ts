@@ -1,5 +1,5 @@
 import { formatWithOptions, inspect } from 'util'
-import { execute } from './lib/execute'
+import { handleCommands } from './lib/execute'
 import { showGeneratehelp, showHelp } from './lib/help'
 
 main(process.argv)
@@ -7,7 +7,7 @@ main(process.argv)
 function main(args: string[]) {
   try {
     const cliArgs = args.slice(2)
-    execute(cliArgs)
+    handleCommands(cliArgs)
   } catch (error) {
     if (error instanceof Error) {
       inspect.styles.string = 'red'

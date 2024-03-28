@@ -1,5 +1,5 @@
 import { completeLuhnNumber } from './completeLuhnNumber'
-import { executeSubCommand } from './executeSubCommand'
+import { executeSubCommand } from './execute'
 import { showHelp } from './help'
 import { isLuhn, logIsLuhn } from './isLuhn'
 
