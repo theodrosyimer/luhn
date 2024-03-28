@@ -19,7 +19,7 @@ export function showHelp() {
 export function showGenerateHelp() {
   console.log('\nUsage: tsx luhn.ts -g [options]\n')
   console.log('Generate random IMEI number or credit card number by type.\n')
-  console.log('Example:')
+  console.log('Examples:')
   console.log('  tsx luhn.ts -g imei\n')
   console.log('  tsx luhn.ts -g card visa\n')
   console.log('  tsx luhn.ts -g card master\n')
