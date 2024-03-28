@@ -34,3 +34,27 @@ export function handleValue(value: string, option?: string) {
   }
   return value
 }
+
+export function handleImeiOption(option: string) {}
+export function handleImeiValue(
+  value: string,
+  option?: string,
+  subcommand?: string,
+) {
+  if (Number.isNaN(+value) && option !== '-h') {
+    throw new Error(
+      `${option} value must be a number! Received: ${option} ${JSON.stringify(value)}`,
+    )
+  }
+  if (
+    (value && value !== '15') ||
+    (value && value !== '16') ||
+    (value && value !== '17')
+  ) {
+    throw new Error(
+      `${option} ${subcommand} value must be a number! Received: ${option} ${subcommand} ${JSON.stringify(value)}`,
+    )
+  }
+}
+export function handleCardOption(option: string) {}
+export function handleCardValue(value: string) {}
