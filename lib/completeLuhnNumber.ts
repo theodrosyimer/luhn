@@ -6,5 +6,5 @@ export function completeLuhnNumber(userNb: string) {
 
   nbDeLuhn = +isLuhn(newUserNb)
   let result = 10 - (nbDeLuhn % 10)
-  return console.log(result)
+  return result
 }

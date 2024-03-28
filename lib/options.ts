@@ -6,6 +6,6 @@ export type Options = typeof options
 
 export const options = {
   '-c': (value: string) => logIsLuhn(isLuhn(value)),
-  '-f': (value: string) => completeLuhnNumber(value),
+  '-f': (value: string) => console.log(completeLuhnNumber(value)),
   '-h': () => showHelp(),
 } as const
