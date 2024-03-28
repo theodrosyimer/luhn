@@ -9,5 +9,10 @@ export const options = {
   '-c': (value: string) => logIsLuhn(isLuhn(value)),
   '-f': (value: string) => console.log(completeLuhnNumber(value)),
   '-h': () => showHelp(),
+} as const
+
+export type OptionsSubCommand = typeof options
+
+export const optionsSubCommand = {
   '-g': (args: string[]) => executeSubCommand(args),
 } as const
