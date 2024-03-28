@@ -1,6 +1,6 @@
 import { formatWithOptions, inspect } from 'util'
 import { handleCommands } from './lib/execute'
-import { showGeneratehelp, showHelp } from './lib/help'
+import { showGenerateHelp, showHelp } from './lib/help'
 
 main(process.argv)
 
@@ -15,7 +15,7 @@ function main(args: string[]) {
         console.error(
           formatWithOptions({ colors: true }, '\n%o', error.message),
         )
-        showGeneratehelp()
+        showGenerateHelp()
       } else {
         console.error(
           formatWithOptions({ colors: true }, '\n%o', error.message),
@@ -29,6 +29,7 @@ function main(args: string[]) {
 }
 
 // {
+//   // TESTS
 //   // Missing arguments
 //   main(['', ''])
 

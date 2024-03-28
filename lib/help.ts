@@ -16,7 +16,7 @@ export function showHelp() {
   console.log('  -h         \tdisplay help for the command')
 }
 
-export function showGeneratehelp() {
+export function showGenerateHelp() {
   console.log('\nUsage: tsx luhn.ts -g [options]\n')
   console.log('Generate random IMEI number or credit card types.\n')
   console.log('Example:')
