@@ -1,4 +1,5 @@
 import { completeLuhnNumber } from './completeLuhnNumber'
+import { executeSubCommand } from './executeSubCommand'
 import { showHelp } from './help'
 import { isLuhn, logIsLuhn } from './isLuhn'
 
@@ -8,4 +9,5 @@ export const options = {
   '-c': (value: string) => logIsLuhn(isLuhn(value)),
   '-f': (value: string) => console.log(completeLuhnNumber(value)),
   '-h': () => showHelp(),
+  '-g': (args: string[]) => executeSubCommand(args),
 } as const
