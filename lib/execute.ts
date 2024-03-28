@@ -40,10 +40,13 @@ export function executeSubCommand(args: string[]) {
         rest[1] === 'amex'
       ) {
         cardGenerator(rest[1])
+      } else {
+        throw new Error(
+          `Expected card argument: master | visa | amex. Received: card ${rest[1]}`,
+        )
       }
-      throw new Error('Missing card type!')
-
+      break
     default:
-      throw new Error(`-g ${rest[0]} is not a valid command!`)
+      throw new Error(`-g ${rest[0]} is not a valid sub-command!`)
   }
 }
