@@ -7,7 +7,10 @@ export function handleArgs(args: string[]) {
 }
 
 export function handleOptionAndValue(option: string, value: string) {
-  if (!value || value.startsWith('-')) {
+  if (
+    (!value && option !== '-h') ||
+    (option !== '-h' && value.startsWith('-'))
+  ) {
     throw new Error(`${option} is missing a value!`)
   }
   return {
@@ -24,7 +27,7 @@ export function handleOption(option: string) {
 }
 
 export function handleValue(value: string, option?: string) {
-  if (Number.isNaN(+value)) {
+  if (Number.isNaN(+value) && option !== '-h') {
     throw new Error(
       `${option} value must be a number! Received: ${option} ${JSON.stringify(value)}`,
     )
