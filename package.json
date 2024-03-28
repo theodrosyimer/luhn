@@ -1,0 +1,16 @@
+{
+  "name": "luhn",
+  "version": "0.0.0",
+  "description": "",
+  "main": "luhn.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Theodros Yimer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
+  }
+}
