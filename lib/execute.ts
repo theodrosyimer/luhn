@@ -24,9 +24,6 @@ export function executeCommands(args: string[]) {
 export function executeSubCommand(args: string[]) {
   const [option, ...rest] = args
 
-  console.log('option:', option)
-  console.log('sub-command:', rest)
-
   if (rest.length > 2) {
     throw new Error('Too much arguments')
   }
