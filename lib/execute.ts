@@ -7,7 +7,7 @@ export function handleCommands(args: string[]) {
   handleArgs(args)
 
   if (args[0] === '-g') {
-    executeSubCommand(args)
+    executeSubCommands(args)
   } else {
     executeCommands(args)
   }
@@ -21,8 +21,8 @@ export function executeCommands(args: string[]) {
   }
 }
 
-export function executeSubCommand(args: string[]) {
-  const [option, ...rest] = args
+export function executeSubCommands(args: string[]) {
+  const [_option, ...rest] = args
 
   if (rest.length > 2) {
     throw new Error('Too much arguments')

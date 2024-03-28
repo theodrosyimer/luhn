@@ -1,5 +1,5 @@
 import { completeLuhnNumber } from './completeLuhnNumber'
-import { executeSubCommand } from './execute'
+import { executeSubCommands } from './execute'
 import { showHelp } from './help'
 import { isLuhn, logIsLuhn } from './isLuhn'
 
@@ -14,5 +14,5 @@ export const options = {
 export type OptionsSubCommand = typeof options
 
 export const optionsSubCommand = {
-  '-g': (args: string[]) => executeSubCommand(args),
+  '-g': (args: string[]) => executeSubCommands(args),
 } as const
