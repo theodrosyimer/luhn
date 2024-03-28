@@ -42,7 +42,7 @@ Usage: tsx luhn.ts -g [options]
 
 Generate random IMEI number or credit card types.
 
-Example:
+Examples:
   tsx luhn.ts -g imei
 
   tsx luhn.ts -g card visa
