@@ -18,7 +18,7 @@ export function showHelp() {
 
 export function showGenerateHelp() {
   console.log('\nUsage: tsx luhn.ts -g [options]\n')
-  console.log('Generate random IMEI number or credit card types.\n')
+  console.log('Generate random IMEI number or credit card number by type.\n')
   console.log('Example:')
   console.log('  tsx luhn.ts -g imei\n')
   console.log('  tsx luhn.ts -g card visa\n')
@@ -26,8 +26,8 @@ export function showGenerateHelp() {
   console.log('  tsx luhn.ts -g card amex\n')
   console.log('Commands:')
   console.log(
-    '  imei [length]\tgenerate a valid IMEI number, length is OPTIONAL and if given MUST be 15, 16 or 17',
+    '  imei [length]\tgenerate a valid IMEI number, length is OPTIONAL (default 15) and if given MUST be either 15, 16 or 17',
   )
-  console.log('  card <type>\tgenerate a valid card type')
-  console.log('  -h         \tdisplay help for the command')
+  console.log('  card <type>\tgenerate a valid credit card number by type')
+  // console.log('  -h         \tdisplay help for the command')
 }
