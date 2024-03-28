@@ -1,6 +1,6 @@
 import { formatWithOptions, inspect } from 'util'
 import { execute } from './lib/execute'
-import { showHelp } from './lib/help'
+import { showGeneratehelp, showHelp } from './lib/help'
 
 main(process.argv)
 
@@ -11,8 +11,17 @@ function main(args: string[]) {
   } catch (error) {
     if (error instanceof Error) {
       inspect.styles.string = 'red'
-      console.error(formatWithOptions({ colors: true }, '\n%o', error.message))
-      showHelp()
+      if (process.argv[2] === '-g') {
+        console.error(
+          formatWithOptions({ colors: true }, '\n%o', error.message),
+        )
+        showGeneratehelp()
+      } else {
+        console.error(
+          formatWithOptions({ colors: true }, '\n%o', error.message),
+        )
+        showHelp()
+      }
       process.exitCode = 1
       process.exit()
     }
