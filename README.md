@@ -40,7 +40,7 @@ Using `-g` flag:
 ```sh
 Usage: tsx luhn.ts -g [options]
 
-Generate random IMEI number or credit card types.
+Generate random IMEI number or credit card number by type.
 
 Examples:
   tsx luhn.ts -g imei
@@ -53,7 +53,7 @@ Examples:
 
 Commands:
   imei [length]	generate a valid IMEI number, length is OPTIONAL and if given MUST be 15, 16 or 17
-  card <type>	generate a valid card type
+  card <type>	generate a valid credit card number by type
 ```
 
 ## Contributors
